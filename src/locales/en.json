@@ -1,0 +1,7 @@
+{
+	"calendar": {
+        "available": "Available Times",
+        "timezone": "* All the timings listed are in your timezone: Taiwan {TZ}",
+        "days": [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+      }
+}

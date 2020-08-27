@@ -1,0 +1,55 @@
+.l-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 26vh 1fr;
+ grid-template-areas: "l-title" "l-main"
+}
+
+.l-title { grid-area: l-title; }
+
+.l-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+ grid-template-areas: "l-paginator" "l-timezone" "l-calendar";
+  grid-area: l-main;
+}
+
+.l-paginator { 
+
+  grid-area: l-paginator; }
+
+.l-timezone { grid-area: l-timezone; }
+
+.l-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0.5em;
+ grid-template-areas: ". . . . . . .";
+  grid-area: l-calendar;
+}
+
+.l-calendar div {
+  text-align: center;
+}
+
+
+/* days available */
+.is-available {
+  border-top: 6px solid green;
+}
+
+.is-unavailable {
+  border-top: 6px solid grey;
+  color: grey;
+}
+
+
+@media screen and (min-device-width: 1200px) {
+  .l-main {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "l-paginator l-timezone" "l-calendar l-calendar";
+  }
+}
